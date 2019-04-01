@@ -1,0 +1,20 @@
+{
+  "name": "BBCNewsCopy",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/CameronSinclair84/BBCNewsCopy.git",
+  "author": "Cameron Sinclair",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10",
+    "sass": "^1.17.3",
+    "typescript": "^3.4.1"
+  },
+  "scripts": {
+    "sass-watch": "yarn run sass src/sass:build --watch",
+    "tsc-watch": "yarn run tsc --watch",
+    "build-watch": "yarn run sass-watch | yarn run tsc-watch",
+    "buildjs": "concurrently \"yarn run tsc-watch\" \"yarn run nodemon build/js/index.js\" \"yarn run sass-watch\""
+  }
+}
