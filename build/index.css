@@ -88,7 +88,7 @@ main {
   padding: 15px;
 }
 
-.articles {
+#articles {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 15px;
@@ -97,8 +97,10 @@ main {
 article {
   background-color: pink;
 }
-article img {
-  width: 100%;
+article .image {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
 }
 article header {
   font-size: x-large;
@@ -142,7 +144,7 @@ article a {
     transition: none;
   }
 
-  .articles {
+  #articles {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

@@ -95,7 +95,7 @@ main {
     padding: $s-md;
 }
 
-.articles {
+#articles {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $s-md;
@@ -103,8 +103,10 @@ main {
 
 article {
     background-color: pink;
-    img {
-        width: 100%;
+    .image {
+        background-size:cover;
+        background-position: center;
+        height: 200px;
     }
     header {
         font-size: x-large;
@@ -151,7 +153,7 @@ article {
     .menulinks {
         transition: none;
     }
-    .articles {
+    #articles {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
