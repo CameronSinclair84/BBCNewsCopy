@@ -9,15 +9,17 @@ ul {
   list-style: none;
 }
 
-header {
+p {
+  padding: 10px;
+}
+
+body > header {
   margin-top: 50px;
-  height: 50px;
   background-color: #bb1919;
-  display: flex;
-  align-items: center;
   color: white;
-  font-size: 40px;
-  padding-left: 5px;
+  font-size: 50px;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 nav {
@@ -32,14 +34,14 @@ nav {
   background-color: white;
   border-bottom: 2px solid #bb1919;
 }
+nav img {
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+}
 
 .dropdown {
   margin: 0 5px;
-}
-
-img {
-  height: 50px;
-  padding: 5px;
 }
 
 .menu {
@@ -82,7 +84,42 @@ a {
   max-height: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+main {
+  padding: 15px;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+}
+
+article {
+  background-color: pink;
+}
+article img {
+  width: 100%;
+}
+article header {
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+article .content {
+  padding: 15px;
+}
+article .time {
+  margin-right: 10px;
+}
+article small {
+  display: block;
+  margin: 10px 0;
+}
+article a {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 700px) {
   nav .menu {
     position: unset;
     flex-grow: 1;
@@ -103,6 +140,10 @@ a {
 
   .menulinks {
     transition: none;
+  }
+
+  .articles {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
